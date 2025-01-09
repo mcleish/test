@@ -242,8 +242,8 @@ for f_policy in forti_formated:
       for j_name, j_details in j_policy.items():
         if f_details == j_details:
           print(f"Policy {f_name} matches policy {j_name}")
-        else:
-          print(f"Policy {f_name} doesn't match a policy on the juniper")
+    else:
+      print(f"Policy {f_name} doesn't match a policy on the juniper")
 
 print("\nChecking Juniper policies against Fortigate policies")
 for j_policy in junos_formated:
@@ -252,5 +252,5 @@ for j_policy in junos_formated:
       for f_name, f_details in f_policy.items():
         if f_details == j_details:
           print(f"Policy {j_name} matches policy {f_name}")
-        else:
-          print(f"Policy {j_name} doesn't match a policy on the Fortigate")
+    else:
+      print(f"Policy {j_name} doesn't match a policy on the Fortigate")
